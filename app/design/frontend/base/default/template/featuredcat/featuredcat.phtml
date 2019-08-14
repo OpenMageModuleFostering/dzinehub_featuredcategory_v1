@@ -1,0 +1,67 @@
+<?php
+/***************************************************************************
+  @extension  : Featured Category Images.
+  @Version    : 1.0.0
+  @package  : Dzinehub_FeaturedCategory
+  @class    : app/design/frontend/base/default/template/featuredcat/featuredcat.phtml 
+  @author   : Srilekha
+  @email    : arun@dzine-hub.com
+  @support  : http://www.dzine-hub.com/contact-us/    
+***************************************************************************/
+$feature= $this->getFeatured();
+if(Mage::getStoreConfig('featured_category/general/enable_disable_field')==1) : ?>
+
+<div class="featured_category">
+<?php if(Mage::helper('dz_featcat')->getFeaturedTitle()!="") :?>
+  <h1 class="featured_title"><?php echo Mage::helper('dz_featcat')->getFeaturedTitle()?></h1>
+<?php endif?>
+<ul>
+<?php if($feature->getSize()): ?>
+<?php $i==0; foreach($feature as $obj):
+//var_dump($obj->getSize());?>
+<?php if($obj->getStatus()==1): ?>
+  
+      <li class="feature_cat">
+   <?php $link=$obj->getLink(); ?>
+   <?php $userimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) .'featuredcategory/'
+    .$obj->getImage();?>
+    <?php $defaultimage = Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_MEDIA) .'placeholder/image.jpg'
+   ?>
+
+   <?php if(Mage::getStoreConfig('featured_category/general/namedisplay')=='above'): ?>
+   
+        <div class="cat_name"><a href="<?php echo $link ?>"><?php echo $obj->getName(); ?></a></div>
+        <?php if($obj->getImage()!=''):?>
+            <div class="feature_cat_image"><a href="<?php echo $link ?>">
+
+          <img src="<?php echo Mage::helper('dz_featcat')->resizeImage($obj->getImage(), 200,200, 'featuredcategory'); ?>" alt="Featured category" />
+
+           <!-- <img src="<?php echo $userimage ?>" alt="user_image" />--></a> </div>
+       <?php else: ?>
+           <div class="feature_cat_image"><a href="<?php echo $link ?>">
+           <!--<img src="<?php echo $defaultimage ?>" alt="user_image" />-->
+            <img src="<?php echo Mage::helper('dz_featcat')->resizeImage('image.jpg', 200,200, 'placeholder'); ?>" alt="Featured category default" />
+           </a></div>
+      <?php endif?>
+  <?php else: ?>
+    
+       <?php if($obj->getImage()!=''):?>
+          <div class="feature_cat_image"><a href="<?php echo $link ?>"><img src="<?php echo Mage::helper('dz_featcat')->resizeImage($obj->getImage(), 200,200, 'featuredcategory'); ?>" alt="Featured category" /></a> </div>
+        <?php else: ?>
+          <div class="feature_cat_image"><a href="<?php echo $link ?>"> <img src="<?php echo Mage::helper('dz_featcat')->resizeImage('image.jpg', 200,200, 'placeholder'); ?>" alt="Featured category default" /></a></div>
+        <?php endif ?>
+          <div class="cat_name"><a href="<?php echo $link ?>"><?php echo $obj->getName(); ?></a></div>
+ <?php endif ?>
+     </li>
+   
+    
+   <?php endif ?>
+    <?php endforeach;?>
+   <?php else: ?>
+    <div class="note_msg">No categories </div>
+<?php endif ?>
+ </ul>
+</div>
+
+<div class="feaclear"></div>
+<?php endif?>

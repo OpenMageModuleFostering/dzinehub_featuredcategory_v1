@@ -1,0 +1,16 @@
+{
+    "name": "OpenMageModuleFostering/dzinehub_featuredcategory_v1",
+    "type": "magento-module",
+    "license": "GNU-General-Public-License",
+    "homepage": "",
+    "description": "This extension is used to create dynamic featured category images in your website.",
+    "authors": [
+    {
+        "name": "Srilekha",
+        "email": "arun@dzine-hub.com"
+    }
+],
+    "suggest": {
+        "magento-hackathon/magento-composer-installer": "*"
+    }
+}

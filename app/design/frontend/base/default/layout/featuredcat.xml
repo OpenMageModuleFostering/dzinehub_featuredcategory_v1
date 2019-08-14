@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+	<default>
+		<reference name="head">
+			  <action method="addCss"><stylesheet>css/featuredcat/featuredcat.css</stylesheet></action>
+		</reference>
+	</default>
+	<dz_featcat_category_index>
+		<reference name="root">
+            <action method="setTemplate"><template>page/1column.phtml</template></action>
+        </reference>
+		<reference name="content">
+			<block type="dz_featcat/category" name="dz_featcat_index" as="featcat" template="featuredcat/featuredcat.phtml"/>
+		</reference>
+	</dz_featcat_category_index>
+</layout>

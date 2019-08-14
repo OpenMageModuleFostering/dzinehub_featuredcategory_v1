@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<config>
+    <tabs>
+         <Dzine-Hub translate="title" module="dz_featcat">
+            <label>Dzine-Hub</label>
+            <!--<label><![CDATA[<div style="position: absolute;"><img id="dzinehub_extension" src="" alt="" border="0" /></div>&nbsp;<script>$('dzinehub_extension').src = SKIN_URL + "images/dzinehub/dzinehub.png";</script>]]></label>-->
+            <sort_order>150</sort_order>
+        </Dzine-Hub>
+    </tabs>
+    <sections>
+        <featured_category translate="title" module="dz_featcat">
+            <label>Featured Category</label>
+            <sort_order>02</sort_order>
+            <tab>Dzine-Hub</tab>
+            <frontend_type>text</frontend_type>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+        <groups>
+            <general tranlate="label" module="dz_featcat">
+                <label>General Settings</label>
+                <frontend_type>text</frontend_type>
+                <sort_order>1</sort_order>
+                <show_in_default>1</show_in_default>
+                <show_in_website>1</show_in_website>
+                <show_in_store>1</show_in_store>
+            <fields>
+                <enable_disable_field translate="label comment">
+                    <label>Enable/Disable Featured Category</label>
+                    <frontend_type>select</frontend_type>
+                     <sort_order>01</sort_order>
+                    <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                    <comment>Enable featured category to display in frontend</comment>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </enable_disable_field>
+                <title translate="label">
+                    <label>Featured Category Title</label>
+                    <depends>
+                        <enable_disable_field>1</enable_disable_field>
+                    </depends>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>02</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </title>
+                 <!--<noofcategory translate="title">
+                    <label>Number of categories per row</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>03</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </noofcategory>-->
+                <namedisplay translate="title">
+                    <label>Display category name above or below</label>
+                    <frontend_type>select</frontend_type>
+                     <depends>
+                        <enable_disable_field>1</enable_disable_field>
+                    </depends>
+                    <sort_order>04</sort_order>
+                     <source_model>dz_featcat/source_abovebelow</source_model>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                </namedisplay>
+            </fields>
+            </general>
+         </groups>
+        </featured_category>
+    </sections>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+
+	<dz_featcat_adminhtml_category_index>
+		<reference name="content">
+			<block type="dz_featcat/adminhtml_category" name="dz_featcat.index"/>
+		</reference>
+	</dz_featcat_adminhtml_category_index>
+</layout>

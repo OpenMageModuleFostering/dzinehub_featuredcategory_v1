@@ -1,0 +1,29 @@
+.feature_cat{
+	float: left;
+	margin: 5px 10px;
+  	width: 22%;
+	list-style-type: none;
+	margin-left: 0em !important;
+}
+.feature_cat img{
+	width: 100%;
+}
+.feaclear{
+	clear: both;
+}
+@media screen and (max-width: 400px){
+	.feature_cat{
+		float: none;
+		width: 100%;
+		margin: 0px;
+		margin-left: 0em !important;
+	}
+}
+@media screen and (min-width: 401px) and (max-width: 640px){
+	.feature_cat{
+		width: 50%;
+		margin: 0px;
+		margin-left: 0em !important;
+		padding: 5px;
+	}
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+    <name>dzinehub_featuredcategory_v1</name>
+    <version>1.0.0.1</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/gpl-license.php">GNU General Public License</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension is used to create dynamic featured category images in your website.</summary>
+    <description>This extension lets you to create featured category images in your magento website and  map category urls for that featured categories.&#xD;
+This extension is very simple and easily handled from the magento admin.&#xD;
+For any support inquiries, contact us at www.dzine-hub.com/contact</description>
+    <notes>Tested to work with magento v1.9, v 1.8, v1.7, v1.6 and v1.5</notes>
+    <authors><author><name>Srilekha</name><user>srilekha</user><email>arun@dzine-hub.com</email></author></authors>
+    <date>2015-11-27</date>
+    <time>10:20:37</time>
+    <contents><target name="magelocal"><dir name="Dzinehub"><dir name="FeaturedCategory"><dir><dir name="Block"><dir name="Adminhtml"><dir name="Category"><dir name="Edit"><file name="Form.php" hash="86cb1ba04016d890c62f8d4b84e3d73e"/><dir name="Tab"><file name="Main.php" hash="d1619b6ee5c226e2ef4b223d5b428ab2"/></dir><file name="Tabs.php" hash="c078982133244a41d840cdc43150480c"/></dir><file name="Edit.php" hash="7e3f906273390daea424449aee3c234c"/><file name="Grid.php" hash="676c56deb152743dd84b0da5dc4c294f"/><dir name="Renderer"><file name="Image.php" hash="62b1ac9754111b3fb8c6dff52239fe29"/></dir></dir><file name="Category.php" hash="592fbe5085db2b7e1c1d082da48aa77d"/></dir><file name="Category.php" hash="aa19e5ed230cd2d2b7d16dd1dded40e6"/></dir><dir name="Helper"><file name="Data.php" hash="957637a36b2561123e305c9725d7dc3a"/></dir><dir name="Model"><file name="Category.php" hash="f88f4db560334b3b1e67c48af322133a"/><dir name="Mysql4"><dir name="Category"><file name="Collection.php" hash="2611cfeab5b33973b403efcbe1beb50c"/></dir><file name="Category.php" hash="84ac453fc73770a1b811f4a8a3a8bb1b"/><file name="Setup.php" hash="167c322358cbe663463f5716c15cc972"/></dir><dir name="Source"><file name="Abovebelow.php" hash="3c9821f4fdf3a24626953c66196eff7e"/></dir></dir><dir name="controllers"><dir name="Adminhtml"><file name="CategoryController.php" hash="1de45e4bbf8ae298c1c1ea5cb4aa9b56"/></dir><file name="CategoryController.php" hash="33f740154650277bec9e06b930c08181"/></dir><dir name="etc"><file name="adminhtml.xml" hash="e3cca45865a987b4a9ddfbfb6d689062"/><file name="config.xml" hash="b0586bea05ec3c6645195ac59b1b9c5b"/><file name="system.xml" hash="8fa768f96655eaa6d6d2714c1b8aca97"/></dir><dir name="sql"><dir name="dz_featcat_setup"><file name="mysql4-install-1.0.0.php" hash="07c136802edd78f13ed226524d3bfaf4"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Dzinehub_FeaturedCategory.xml" hash="b6488e867179a93a2dc521c4f8c8c8b9"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="featuredcat.xml" hash="43c6b6fc92baac9c349d1424b12043e1"/></dir></dir></dir></dir><dir name="frontend"><dir name="base"><dir name="default"><dir name="template"><dir name="featuredcat"><file name="featuredcat.phtml" hash="142ccbf980e24db0aa956f3ac500c30e"/></dir></dir><dir name="layout"><file name="featuredcat.xml" hash="0572bc88b307ca700ba95e21ed77b2a8"/></dir></dir></dir></dir></target><target name="magemedia"><dir name="placeholder"><file name="image.jpg" hash="097ab8a3051bc037ea3de0e17f440540"/></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="featuredcat"><file name="featuredcat.css" hash="1df7ea3a190b6eace2f0f7619df0bfaa"/></dir></dir></dir></dir></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.1</min><max>6.0.0</max></php></required></dependencies>
+</package>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<config>
+	<menu>
+		 <dzinehub translate="title" module="dz_featcat">
+            <title>dZine-Hub</title>
+            <sort_order>80</sort_order>
+            <children>
+				<featured_cat translate="title" module="dz_featcat">
+					<title>Featured Category</title>
+					<sort_order>2</sort_order>
+					<children>
+						<menu1 module="dz_featcat">
+							<title>Manage Featured Category</title>
+							<sort_order>1</sort_order>
+							<action>dz_featcat/adminhtml_category</action>
+						</menu1>
+					</children>
+				</featured_cat>
+			</children>
+		</dzinehub>
+	</menu>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<dzinehub translate="title" module="dz_featcat">
+							<title>dZine-Hub</title>
+							<sort_order>80</sort_order>
+								<children>
+									<featured_cat module="dz_featcat" translate="title">
+										<title>Dzine-Hub Featured Category</title>
+										<sort_order>2</sort_order>
+										<children>
+										<menu1 module="dz_featcat">
+											<title>Manage Featured Category</title>
+											<action>dz_featcat/adminhtml_category</action>
+										</menu1>
+										</children>
+									</featured_cat>
+								</children>
+							</dzinehub>
+						<system>
+							<children>
+								<config>
+									<children>
+										<featured_category module="dz_featcat" translate="title">
+											<title>Dzine-Hub Featured Category</title>
+											<sort_order>02</sort_order>
+										</featured_category>
+									</children>
+								</config>
+							</children>
+						</system>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+</config>
