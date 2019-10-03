@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 This extension is used to create dynamic featured category images in your website.
